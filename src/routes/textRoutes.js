@@ -14,6 +14,9 @@ const paragraphRewriterController = require('../controllers/write/paragraphRewri
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+    res.send("hello");
+});
 router.post('/essay', essayController.generateEssay);
 router.post('/improver', contentImproverController.improveContent);
 router.post('/paragraph', paragraphWriterController.generateParagraph);
